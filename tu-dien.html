@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ Điển</h2>
+<h3> EN = ["dog", "cat", "mouse"]<br>
+    VI = ["chó", "mèo", "chuột"]</h3>
+<label for="en">en :</label>
+<input type="text" value="" id="en">
+<input type="button" value="Translate" onclick="trans()">
+<h1 id="result"><br></h1>
+<script>
+    //let res = document.getElementById("result");
+
+    function trans() {
+        let input = document.getElementById("en").value;
+        let EN = ["dog", "cat", "mouse"];
+        let VI = ["chó", "mèo", "chuột"];
+        let index_eng = 0;
+        let result = "";
+        for (let i = 0; i < EN.length; i++) {
+            if (input == EN[i]) {
+                index_eng = i;
+                for (let j = 0; j < VI; j++) {
+                    if (index_eng == j) {
+                        result = VI[j];
+                    }
+                }
+document.getElementById("result").innerHTML = result;
+            }
+        }
+    }
+</script>
+</body>
+</html>
